@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Vector Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/ico" href="./img/favicon.ico">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codepen.io/jebbles/pen/MKoYya">
+<meta property="og:title" content="Onboarding Screens">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://assets.codepen.io/167555/onboarding-walkthrough-screens.PNG">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://codepen.io/jebbles/pen/MKoYya">
+<meta property="twitter:title" content="Onboarding Screens">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="https://assets.codepen.io/167555/onboarding-walkthrough-screens.PNG"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:700,300'>
+<link rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css'><link rel="stylesheet" href="./style/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- / A set of walkthrough screens in HTML/CSS/JS. A personal experiment with layering images, CSS3 transitions, & flexbox. -->
+<a target="_blank" class="open-walkthrough" href="../Basic/index.html" style="text-align: center; color: white;">Start</a>
+<!--<button class='open-walkthrough'>Start</button>-->
+<div class='walkthrough show reveal'>
+  <div class='walkthrough-pagination'>
+    <a class='dot active'></a>
+    <a class='dot'></a>
+    <a class='dot'></a>
+    <a class='dot'></a>
+    <a class='dot'></a>
+  </div>
+  <div class='walkthrough-body'>
+    <ul class='screens animate'>
+      <li class='screen active'>
+        <div class='media logo'>
+          <img class='logo' src='https://s3.amazonaws.com/jebbles-codepen/icon.png'>
+        </div>
+        <h3 style="text-align: center;">
+          ¡Bienvenida/o
+          <br>a vector calculator!</br>
+        </h3>
+        <p>Aquí encontrarás la forma de calcular vectores de una manera sencilla.</p>
+        <p style="text-align: center;">A continuación te presentamos las instrucciones:</p>
+      </li>
+      <li class='screen'>
+        <div class='media books'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/book_icon_1.png'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/book_icon_2.png'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/book_icon_3.png'>
+        </div>
+        <h3>
+          Vectores y Ángulos
+        </h3>
+        <p>Para empezar encontrás dos casillas.</p>
+        <p style="text-align: center;"> La primera será así-> |vⁿ|, allí tendrás que ingresar el valor en Newton´s.</p>
+        <p style="text-align: center;"> La segunda será así-> Áng°, allí tendrás que ingresar el valor del ángulo.</p>
+      </li>
+      <li class='screen'>
+        <div class='media bars'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/bar_icon_axis.png'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/bar_icon_3.png'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/bar_icon_2.png'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/bar_icon_1.png'>
+        </div>
+        <h3>
+          X and Y
+        </h3>
+        <p>Después de ingresar los valores tendrás que dar clic en los botones X y Y para que obtengas las fuerzas de cada vector. ¡Importante! Recuerda que el eje X esta calculado en Coseno y el eje Y en Seno.</p>
+      </li>
+      <li class='screen'>
+        <div class='media files'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_1.png'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_2.png'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_3.png'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_4.png'>
+        </div>
+        <h3>
+          Resultados
+        </h3>
+        <p>Después de ingresar los seis vectores podrás obtener la sumatoria de las fuerzas X y Y dando clic en los botones-> ∑x-> ∑y.</p>
+        <p style="text-align: center;">Teniendo en cuenta que tus resultados pueden variar, te ofrecemos la siguiente solución:</p>
+      </li>
+      <li class='screen'>
+        <div class='media comm'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/comm_icon_1.png'>
+          <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/comm_icon_2.png'>
+        </div>
+        <h3>
+          Solución
+        </h3>
+        <p>Ingresa los resultados en las casillas Resultado en X y en Y; en la parte de abajo podrás ir evidenciando la sumatoria de las fuerzas en X y en Y. Adicionalmente puedes obtener la magnitud total y el ángulo total dando clic en los botones -Mᵗ θ- ó dando clic en los botones MAGNITUD TOTAL y ÁNGULO TOTAL</p>
+      </li>
+    </ul>
+    <button class='prev-screen'>
+      <i class='icon-angle-left'></i>
+    </button>
+    <button class='next-screen'>
+      <i class='icon-angle-right'></i>
+    </button>
+  </div>
+  <div class='walkthrough-footer'>
+    <button class='button next-screen'>Next</button>
+    <button class='button finish close' disabled='true'>Finish</button>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script><script  src="./scripts/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Calculator</title>
+    <link rel="icon" type="image/ico" href="./img/favicon.ico">
+
+    <div id="LogoU">
+        <img src="./img/headImg.png" alt="LogoU" width="270">
+    </div>
+    <center>
+        <div id="titleHead">
+            <h1>Calculadora de Vectores</h1>
+        </div>
+    </center>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" 
+    rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        
+        #LogoU {
+            margin-left: 15px; 
+            margin-top: 25px;
+        }
+
+        #titleHead {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        body{
+            font-family:'Source Sans Pro', sans-serif;
+             background: linear-gradient(rgb(230, 211, 249), rgb(206, 160, 241));
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            letter-spacing: 1px;
+        }
+
+        .a{
+            margin-left: 10px;      
+        }
+
+        .col{
+            border-radius: 5px;
+            height: 50px;
+            margin-bottom: 20px;
+            width: 370px;
+            align-items: center;
+            display: flex;
+            border-style: solid; border-width: 1px;
+            border-color: gray;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);   
+        }
+
+        input[type="text"]{
+            width: 100px;
+            height: 25px;
+            margin-right: 10px;
+            font-family:'Source Sans Pro', sans-serif;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: white;
+            border: 0;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+
+        }
+
+        output{
+            color: black;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .x{
+            margin-bottom: 5px;
+            margin-right: 5px;
+        }
+
+        .y {
+            margin-right: 5px;  
+        }
+
+        .pv1{
+            display: grid;
+        }
+
+        .pv2{
+            display: flex;
+        }
+
+        .pv3 {
+            display: grid;
+        }
+
+        .pv4 {
+            display: flex;
+        }
+
+        #grid2 {
+            float: right;
+            margin-left: 10%;
+        }
+
+        button {
+            border-radius: 20%;
+            width: 25px;
+            height: 20px;
+            font-size: 10px;
+            text-align: center;
+            align-items: center;
+            font-family:'Source Sans Pro', sans-serif;
+            border: none;
+            color: white;
+            font-weight: bold;
+            background: gray;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+
+        }
+
+        button:hover {
+            background-color: #B9BDC3;
+        }
+
+        #sumatoriaX {
+            margin-bottom: 10px;
+            margin-right: 5px;
+        }
+
+        #sumatoriaY {
+            margin-bottom: 10px;
+            margin-right: 5px;
+        }
+
+        #magT {
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #angT {
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #results {
+            display: grid;
+        }
+
+        #titleFooter
+        {
+            font-size: 13.4px;
+        }
+
+        #LogoN {
+            position: relative;
+            margin-left: 83%;
+            margin-top: -90px;
+        }
+
+        #anguT {
+            border-radius: 12px;
+            width: 150px;
+            height: 30px;
+            cursor: pointer;
+            transition: all .2s;
+            font-size: 15px;
+            font-weight: bold;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #anguT:hover {
+            background: black;
+            transition-delay: .4s;
+            color: white;
+            font-size: 1rem;
+        }
+
+        #magniT {
+            border-radius: 12px;
+            width: 150px;
+            height: 30px;
+            cursor: pointer;
+            transition: all .2s;
+            font-size: 15px;
+            font-weight: bold;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #magniT:hover {
+            background: black;
+            transition-delay: .4s;
+            color: white;
+            font-size: 1rem;
+
+        }
+
+        #magT {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #angT {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #grid3 {
+            width: 350px;
+            height: 350px;
+            margin-bottom: 100px;
+            font-size: 22.7px;
+            border-style: solid; border-width: 2.5px;;
+            border-radius: 20px;
+            border-color: gray;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);   
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <div id="grid">
+        <div class="col">
+            <div class="a">
+                <input type="text" id="v1" placeholder="|v¹|">
+                <input type="text" id="Ang1" placeholder="Áng°">
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="x1" class="x">X</button>
+                    <output id="rx1"></output>
+                </div>
+                <div class="pv2">
+                    <button id="y1" class="y">Y</button>
+                    <output id="ry1"></output>
+                </div> 
+            </div>  
+        </div>  
+        
+        <div class="col">
+            <div class="a">
+                <input type="text" id="v2" placeholder="|v²|">
+                <input type="text" id="Ang2" placeholder="Áng°">
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="x2" class="x">X</button>
+                    <output id="rx2"></output>
+                </div>
+                <div class="pv2">
+                    <button id="y2" class="y">Y</button>
+                    <output id="ry2"></output>
+                </div> 
+            </div>  
+        </div>  
+
+        <div class="col">
+            <div class="a">
+                <input type="text" id="v3" placeholder="|v³|">
+                <input type="text" id="Ang3" placeholder="Áng°">
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="x3" class="x">X</button>
+                    <output id="rx3"></output>
+                </div>
+                <div class="pv2">
+                    <button id="y3" class="y">Y</button>
+                    <output id="ry3"></output>
+                </div> 
+            </div>  
+        </div>  
+
+        <div class="col">
+            <div class="a">
+                <input type="text" id="v4" placeholder="|v⁴|">
+                <input type="text" id="Ang4" placeholder="Áng°">
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="x4" class="x">X</button>
+                    <output id="rx4"></output>
+                </div>
+                <div class="pv2">
+                    <button id="y4" class="y">Y</button>
+                    <output id="ry4"></output>
+                </div> 
+            </div>  
+        </div>  
+
+        <div class="col">
+            <div class="a">
+                <input type="text" id="v5" placeholder="|v⁵|">
+                <input type="text" id="Ang5" placeholder="Áng°">
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="x5" class="x">X</button>
+                    <output id="rx5"></output>
+                </div>
+                <div class="pv2">
+                    <button id="y5" class="y">Y</button>
+                    <output id="ry5"></output>
+                </div> 
+            </div>  
+        </div>  
+
+        <div class="col">
+            <div class="a">
+                <input type="text" id="v6" placeholder="|v⁶|">
+                <input type="text" id="Ang6" placeholder="Áng°">
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="x6" class="x">X</button>
+                    <output id="rx6"></output>
+                </div>
+                <div class="pv2">
+                    <button id="y6" class="y">Y</button>
+                    <output id="ry6"></output>
+                </div> 
+            </div> 
+        </div>
+        <div class="pv1">
+            <div class="pv2">
+                <button id="sumatoriaX">∑x</button>
+                <output id="sumaX"></output>
+            </div>
+            <div class="pv2">
+                <button id="sumatoriaY">∑y</button>  
+                <output id="sumaY"></output>
+            </div> 
+        </div> 
+    </div>
+    <div id="grid2">
+        <div class="col">
+            <div class="a">
+                <input type="text" id="inx1" placeholder="Resultado en X" onchange="sumMagX(this.value);"/>
+                <input type="text" id="iny1" placeholder="Resultado en Y" onchange="sumMagY(this.value);"/>
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="sumatoriaX2" class="x">Mᵗ</button>
+                    <output id="sumaX2"></output>
+                </div>
+                <div class="pv2">
+                    <button id="sumatoriaY2" class="y">θ</button>  
+                    <output id="sumaY2"></output>
+                </div> 
+            </div>   
+        </div>  
+        <div class="col">
+            <div class="a">
+                <input type="text" id="inx2" placeholder="Resultado en X" onchange="sumMagX(this.value);"/>
+                <input type="text" id="iny2" placeholder="Resultado en Y" onchange="sumMagY(this.value);"/>
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="sumatoriaX3" class="x">Mᵗ</button>
+                    <output id="sumaX3"></output>
+                </div>
+                <div class="pv2">
+                    <button id="sumatoriaY3" class="y">θ</button>  
+                    <output id="sumaY3"></output>
+                </div> 
+            </div>   
+        </div>  
+        <div class="col">
+            <div class="a">
+                <input type="text" id="inx3" placeholder="Resultado en X" onchange="sumMagX(this.value);"/>
+                <input type="text" id="iny3" placeholder="Resultado en Y" onchange="sumMagY(this.value);"/>
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="sumatoriaX4" class="x">Mᵗ</button>
+                    <output id="sumaX4"></output>
+                </div>
+                <div class="pv2">
+                    <button id="sumatoriaY4" class="y">θ</button>  
+                    <output id="sumaY4"></output>
+                </div> 
+            </div>   
+        </div>  
+        <div class="col">
+            <div class="a">
+                <input type="text" id="inx4" placeholder="Resultado en X" onchange="sumMagX(this.value);"/>
+                <input type="text" id="iny4" placeholder="Resultado en Y" onchange="sumMagY(this.value);"/>
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="sumatoriaX5" class="x">Mᵗ</button>
+                    <output id="sumaX5"></output>
+                </div>
+                <div class="pv2">
+                    <button id="sumatoriaY5" class="y">θ</button>  
+                    <output id="sumaY5"></output>
+                </div> 
+            </div>   
+        </div>  
+        <div class="col">
+            <div class="a">
+                <input type="text" id="inx5" placeholder="Resultado en X" onchange="sumMagX(this.value);"/>
+                <input type="text" id="iny5" placeholder="Resultado en Y" onchange="sumMagY(this.value);"/>
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="sumatoriaX6" class="x">Mᵗ</button>
+                    <output id="sumaX6"></output>
+                </div>
+                <div class="pv2">
+                    <button id="sumatoriaY6" class="y">θ</button>  
+                    <output id="sumaY6"></output>
+                </div> 
+            </div>   
+        </div>  
+        <div class="col">
+            <div class="a">
+                <input type="text" id="inx6" placeholder="Resultado en X"onchange="sumMagX(this.value);"/>
+                <input type="text" id="iny6" placeholder="Resultado en Y"onchange="sumMagY(this.value);"/>
+            </div>
+            <div class="pv1">
+                <div class="pv2">
+                    <button id="sumatoriaX1" class="x">Mᵗ</button>
+                    <output id="sumaX1"></output>
+                </div>
+                <div class="pv2">
+                    <button id="sumatoriaY1" class="y">θ</button>  
+                    <output id="sumaY1"></output>
+                </div> 
+            </div>   
+        </div>  
+    </div>
+</main>
+<center>
+<div id="grid3">
+        <h6><span>SUMATORIA DE FUERZAS EN X: </span> <span id="MagX"></h6>
+        <h6><span>SUMATORIA DE FUERZAS EN Y: </span> <span id="MagY"></h6>
+        <div>
+            <p id="magniT">MAGNITUD TOTAL (N)</p>
+            <output id="magT" class="y"></output>
+        </div>
+        <div>
+            <p id="anguT" style="align-items: center">ÁNGULO TOTAL (θ)</p>
+            <output id="angT" class="y"></output>
+        </div>
+</div>
+</center>
+    <script>
+        let op;
+        document.querySelector('#x1').addEventListener('click', () =>{
+            op = 'X';
+        });
+
+        document.querySelector('#y1').addEventListener('click', () =>{
+            op = 'Y';
+        });
+
+        document.querySelector('#x2').addEventListener('click', () =>{
+            op = 'X';
+        });
+
+        document.querySelector('#y2').addEventListener('click', () =>{
+            op = 'Y';
+        });
+
+        document.querySelector('#x3').addEventListener('click', () =>{
+            op = 'X';
+        });
+
+        document.querySelector('#y3').addEventListener('click', () =>{
+            op = 'Y';
+        });
+
+        document.querySelector('#x4').addEventListener('click', () =>{
+            op = 'X';
+        });
+
+        document.querySelector('#y4').addEventListener('click', () =>{
+            op = 'Y';
+        });
+
+        document.querySelector('#x5').addEventListener('click', () =>{
+            op = 'X';
+        });
+
+        document.querySelector('#y5').addEventListener('click', () =>{
+            op = 'Y';
+        });
+
+        document.querySelector('#x6').addEventListener('click', () =>{
+            op = 'X';
+        });
+
+        document.querySelector('#y6').addEventListener('click', () =>{
+            op = 'Y';
+        });
+
+        document.querySelector('#sumatoriaX').addEventListener('click', () =>{
+            op = '∑x';
+        });
+
+        document.querySelector('#sumatoriaY').addEventListener('click', () =>{
+            op = '∑y';
+        });
+
+        document.querySelector('#sumatoriaX1').addEventListener('click', () =>{
+            op = 'Mᵗ';
+        });
+
+        document.querySelector('#sumatoriaY1').addEventListener('click', () =>{
+            op = 'θ';
+        });
+
+        document.querySelector('#sumatoriaX2').addEventListener('click', () =>{
+            op = 'Mᵗ';
+        });
+
+        document.querySelector('#sumatoriaY2').addEventListener('click', () =>{
+            op = 'θ';
+        });
+
+        document.querySelector('#sumatoriaX3').addEventListener('click', () =>{
+            op = 'Mᵗ';
+        });
+
+        document.querySelector('#sumatoriaY3').addEventListener('click', () =>{
+            op = 'θ';
+        });
+
+        document.querySelector('#sumatoriaX4').addEventListener('click', () =>{
+            op = 'Mᵗ';
+        });
+
+        document.querySelector('#sumatoriaY4').addEventListener('click', () =>{
+            op = 'θ';
+        });
+
+        document.querySelector('#sumatoriaX5').addEventListener('click', () =>{
+            op = 'Mᵗ';
+        });
+
+        document.querySelector('#sumatoriaY5').addEventListener('click', () =>{
+            op = 'θ';
+        });
+
+        document.querySelector('#sumatoriaX6').addEventListener('click', () =>{
+            op = 'Mᵗ';
+        });
+
+        document.querySelector('#sumatoriaY6').addEventListener('click', () =>{
+            op = 'θ';
+        });
+
+        document.querySelector('#magniT').addEventListener('click', () =>{
+            op = 'MAGNITUD TOTAL (N)';
+        });
+
+        document.querySelector('#anguT').addEventListener('click', () =>{
+            op = 'ÁNGULO TOTAL (θ)';
+        });
+
+
+
+        Math.grados = function(radianes) {
+            return radianes * 180 / Math.PI;
+        };
+
+        Math.radianes = function(grados) {
+            return grados * Math.PI / 180;
+        };
+
+        document.querySelector('#x1').addEventListener('click', () =>{
+            const v1 = parseInt(document.querySelector('#v1').value);
+            const Ang1 = parseInt(document.querySelector('#Ang1').value);
+
+            let rx1;
+            if(op == 'X'){
+                antesSeno = Math.radianes(Ang1);
+                r = v1 * Math.cos(antesSeno);
+                rx1 = r.toFixed(2)
+            }
+            document.querySelector('#rx1').innerHTML = rx1;
+        });
+        document.querySelector('#y1').addEventListener('click', () =>{
+            const v1 = parseInt(document.querySelector('#v1').value);
+            const Ang1 = parseInt(document.querySelector('#Ang1').value);
+
+            let ry1;
+            if(op == 'Y'){
+                antesSeno = Math.radianes(Ang1);
+                r = v1 * Math.sin(antesSeno);
+                ry1 = r.toFixed(2)
+            }
+            document.querySelector('#ry1').innerHTML = ry1;
+        });
+
+        document.querySelector('#x2').addEventListener('click', () =>{
+            const v2 = parseInt(document.querySelector('#v2').value);
+            const Ang2 = parseInt(document.querySelector('#Ang2').value);
+
+            let rx2;
+            if(op == 'X'){
+                antesSeno = Math.radianes(Ang2);
+                r = v2 * Math.cos(antesSeno);
+                rx2 = r.toFixed(2)
+            }
+            document.querySelector('#rx2').innerHTML = rx2;
+        });
+        document.querySelector('#y2').addEventListener('click', () =>{
+            const v2 = parseInt(document.querySelector('#v2').value);
+            const Ang2 = parseInt(document.querySelector('#Ang2').value);
+
+            let ry2;
+            if(op == 'Y'){
+                antesSeno = Math.radianes(Ang2);
+                r = v2 * Math.sin(antesSeno);
+                ry2 = r.toFixed(2)
+            }
+            document.querySelector('#ry2').innerHTML = ry2;
+        });
+
+        document.querySelector('#x3').addEventListener('click', () =>{
+            const v3 = parseInt(document.querySelector('#v3').value);
+            const Ang3 = parseInt(document.querySelector('#Ang3').value);
+
+            let rx3;
+            if(op == 'X'){
+                antesSeno = Math.radianes(Ang3);
+                r = v3 * Math.cos(antesSeno);
+                rx3 = r.toFixed(2)
+            }
+            document.querySelector('#rx3').innerHTML = rx3;
+        });
+        document.querySelector('#y3').addEventListener('click', () =>{
+            const v3 = parseInt(document.querySelector('#v3').value);
+            const Ang3 = parseInt(document.querySelector('#Ang3').value);
+
+            let ry3;
+            if(op == 'Y'){
+                antesSeno = Math.radianes(Ang3);
+                r = v3 * Math.sin(antesSeno);
+                ry3 = r.toFixed(2)
+            }
+            document.querySelector('#ry3').innerHTML = ry3;
+        });
+
+        document.querySelector('#x4').addEventListener('click', () =>{
+            const v4 = parseInt(document.querySelector('#v4').value);
+            const Ang4 = parseInt(document.querySelector('#Ang4').value);
+
+            let rx4;
+            if(op == 'X'){
+                antesSeno = Math.radianes(Ang4);
+                r = v4 * Math.cos(antesSeno);
+                rx4 = r.toFixed(2)
+            }
+            document.querySelector('#rx4').innerHTML = rx4;
+        });
+        document.querySelector('#y4').addEventListener('click', () =>{
+            const v4 = parseInt(document.querySelector('#v4').value);
+            const Ang4 = parseInt(document.querySelector('#Ang4').value);
+
+            let ry4;
+            if(op == 'Y'){
+                antesSeno = Math.radianes(Ang4);
+                r = v4 * Math.sin(antesSeno);
+                ry4 = r.toFixed(2)
+            }
+            document.querySelector('#ry4').innerHTML = ry4;
+        });
+
+        document.querySelector('#x5').addEventListener('click', () =>{
+            const v5 = parseInt(document.querySelector('#v5').value);
+            const Ang5 = parseInt(document.querySelector('#Ang5').value);
+
+            let rx5;
+            if(op == 'X'){
+                antesSeno = Math.radianes(Ang5);
+                r = v5 * Math.cos(antesSeno);
+                rx5 = r.toFixed(2)
+            }
+            document.querySelector('#rx5').innerHTML = rx5;
+        });
+        document.querySelector('#y5').addEventListener('click', () =>{
+            const v5 = parseInt(document.querySelector('#v5').value);
+            const Ang5 = parseInt(document.querySelector('#Ang5').value);
+
+            let ry5;
+            if(op == 'Y'){
+                antesSeno = Math.radianes(Ang5);
+                r = v5 * Math.sin(antesSeno);
+                ry5 = r.toFixed(2)
+            }
+            document.querySelector('#ry5').innerHTML = ry5;
+        });
+
+        document.querySelector('#x6').addEventListener('click', () =>{
+            const v6 = parseInt(document.querySelector('#v6').value);
+            const Ang6 = parseInt(document.querySelector('#Ang6').value);
+
+            let rx6;
+            if(op == 'X'){
+                antesSeno = Math.radianes(Ang6);
+                r = v6 * Math.cos(antesSeno);
+                rx6 = r.toFixed(2)
+            }
+            document.querySelector('#rx6').innerHTML = rx6;
+        });
+        document.querySelector('#y6').addEventListener('click', () =>{
+            const v6 = parseInt(document.querySelector('#v6').value);
+            const Ang6 = parseInt(document.querySelector('#Ang6').value);
+
+            let ry6;
+            if(op == 'Y'){
+                antesSeno = Math.radianes(Ang6);
+                r = v6 * Math.sin(antesSeno);
+                ry6 = r.toFixed(2)
+            }
+            document.querySelector('#ry6').innerHTML = ry6;
+        });
+
+        document.querySelector('#sumatoriaX').addEventListener('click', () =>{
+            const rx1= parseFloat(document.querySelector('#rx1').value);
+            const rx2= parseFloat(document.querySelector('#rx2').value);
+            const rx3= parseFloat(document.querySelector('#rx3').value);
+            const rx4= parseFloat(document.querySelector('#rx4').value);
+            const rx5= parseFloat(document.querySelector('#rx5').value);
+            const rx6= parseFloat(document.querySelector('#rx6').value);
+
+            let sumaX;
+            if(op == '∑x'){
+                suma = rx1+rx2+rx3+rx4+rx5+rx6;
+                sumaX = suma.toFixed(2)
+            }
+            document.querySelector('#sumaX').innerHTML = sumaX;
+        });
+
+        document.querySelector('#sumatoriaY').addEventListener('click', () =>{
+            const ry1= parseFloat(document.querySelector('#ry1').value);
+            const ry2= parseFloat(document.querySelector('#ry2').value);
+            const ry3= parseFloat(document.querySelector('#ry3').value);
+            const ry4= parseFloat(document.querySelector('#ry4').value);
+            const ry5= parseFloat(document.querySelector('#ry5').value);
+            const ry6= parseFloat(document.querySelector('#ry6').value);
+
+            let sumaY;
+            if(op == '∑y'){
+                suma = ry1+ry2+ry3+ry4+ry5+ry6;
+                sumaY = suma.toFixed(2);
+            }
+            document.querySelector('#sumaY').innerHTML = sumaY;
+        });
+
+        function sumMagX (valor) {
+            var total = 0;	
+            valor = parseFloat(valor);
+            
+            total = document.getElementById('MagX').innerHTML;
+
+            total = (total == null || total == undefined || total == "") ? 0 : total;
+
+            total1 = (parseFloat(total) + parseFloat(valor));
+
+            total = total1.toFixed(2)
+
+            document.getElementById('MagX').innerHTML = total;
+        }
+
+        function sumMagY (valor) {
+            var total = 0;	
+            valor = parseFloat(valor);
+            
+            total = document.getElementById('MagY').innerHTML;
+
+            total = (total == null || total == undefined || total == "") ? 0 : total;
+
+            total1 = (parseFloat(total) + parseFloat(valor));
+
+            total = total1.toFixed(2)
+
+            document.getElementById('MagY').innerHTML = total;
+        }
+
+        document.querySelector('#sumatoriaX1').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const inx4= parseFloat(document.querySelector('#inx4').value);
+            const inx5= parseFloat(document.querySelector('#inx5').value);
+            const inx6= parseFloat(document.querySelector('#inx6').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+            const iny4= parseFloat(document.querySelector('#iny4').value);
+            const iny5= parseFloat(document.querySelector('#iny5').value);
+            const iny6= parseFloat(document.querySelector('#iny6').value);
+
+            let sumaX1;
+            if(op == 'Mᵗ'){
+                suma1 = inx1+inx2+inx3+inx4+inx5+inx6;
+                suma2 = iny1+iny2+iny3+iny4+iny5+iny6;
+                magT1 = Math.sqrt(Math.pow(suma1,2) + Math.pow(suma2,2))
+                sumaX1 = magT1.toFixed(2)
+            }
+            document.querySelector('#sumaX1').innerHTML = sumaX1;
+        });
+
+
+        document.querySelector('#sumatoriaY1').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const inx4= parseFloat(document.querySelector('#inx4').value);
+            const inx5= parseFloat(document.querySelector('#inx5').value);
+            const inx6= parseFloat(document.querySelector('#inx6').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+            const iny4= parseFloat(document.querySelector('#iny4').value);
+            const iny5= parseFloat(document.querySelector('#iny5').value);
+            const iny6= parseFloat(document.querySelector('#iny6').value);
+    
+            let sumaY1;
+            if(op == 'θ'){
+                suma1 = inx1+inx2+inx3+inx4+inx5+inx6;
+                suma2 = iny1+iny2+iny3+iny4+iny5+iny6;
+                angT2 = (suma2/suma1)
+                angT3 = Math.atan(angT2) * 180/Math.PI;
+                sumaY1 = angT3.toFixed(2)
+            }
+            document.querySelector('#sumaY1').innerHTML = sumaY1;
+        });
+
+        document.querySelector('#sumatoriaX2').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+
+            let sumaX2;
+            if(op == 'Mᵗ'){
+                suma1 = inx1;
+                suma2 = iny1;
+                magT1 = Math.sqrt(Math.pow(suma1,2) + Math.pow(suma2,2))
+                sumaX2 = magT1.toFixed(2)
+            }
+            document.querySelector('#sumaX2').innerHTML = sumaX2;
+        });
+
+
+        document.querySelector('#sumatoriaY2').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+    
+            let sumaY2;
+            if(op == 'θ'){
+                suma1 = inx1;
+                suma2 = iny1;
+                angT2 = (suma2/suma1)
+                angT3 = Math.atan(angT2) * 180/Math.PI;
+                sumaY2 = angT3.toFixed(2)
+            }
+            document.querySelector('#sumaY2').innerHTML = sumaY2;
+        });
+
+        document.querySelector('#sumatoriaX3').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+
+            let sumaX3;
+            if(op == 'Mᵗ'){
+                suma1 = inx1+inx2;
+                suma2 = iny1+iny2;
+                magT1 = Math.sqrt(Math.pow(suma1,2) + Math.pow(suma2,2))
+                sumaX3 = magT1.toFixed(2)
+            }
+            document.querySelector('#sumaX3').innerHTML = sumaX3;
+        });
+
+
+        document.querySelector('#sumatoriaY3').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+    
+            let sumaY3;
+            if(op == 'θ'){
+                suma1 = inx1+inx2;
+                suma2 = iny1+iny2;
+                angT2 = (suma2/suma1)
+                angT3 = Math.atan(angT2) * 180/Math.PI;
+                sumaY3 = angT3.toFixed(2)
+            }
+            document.querySelector('#sumaY3').innerHTML = sumaY3;
+        });
+
+        document.querySelector('#sumatoriaX4').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+
+            let sumaX4;
+            if(op == 'Mᵗ'){
+                suma1 = inx1+inx2+inx3;
+                suma2 = iny1+iny2+iny3;
+                magT1 = Math.sqrt(Math.pow(suma1,2) + Math.pow(suma2,2))
+                sumaX4 = magT1.toFixed(2)
+            }
+            document.querySelector('#sumaX4').innerHTML = sumaX4;
+        });
+
+
+        document.querySelector('#sumatoriaY4').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+    
+            let sumaY4;
+            if(op == 'θ'){
+                suma1 = inx1+inx2+inx3;
+                suma2 = iny1+iny2+iny3;
+                angT2 = (suma2/suma1)
+                angT3 = Math.atan(angT2) * 180/Math.PI;
+                sumaY4 = angT3.toFixed(2)
+            }
+            document.querySelector('#sumaY4').innerHTML = sumaY4;
+        });
+
+        document.querySelector('#sumatoriaX5').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const inx4= parseFloat(document.querySelector('#inx4').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+            const iny4= parseFloat(document.querySelector('#iny4').value);
+
+            let sumaX5;
+            if(op == 'Mᵗ'){
+                suma1 = inx1+inx2+inx3+inx4;
+                suma2 = iny1+iny2+iny3+iny4;
+                magT1 = Math.sqrt(Math.pow(suma1,2) + Math.pow(suma2,2))
+                sumaX5 = magT1.toFixed(2)
+            }
+            document.querySelector('#sumaX5').innerHTML = sumaX5;
+        });
+
+
+        document.querySelector('#sumatoriaY5').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const inx4= parseFloat(document.querySelector('#inx4').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+            const iny4= parseFloat(document.querySelector('#iny4').value);
+    
+            let sumaY5;
+            if(op == 'θ'){
+                suma1 = inx1+inx2+inx3+inx4;
+                suma2 = iny1+iny2+iny3+iny4;
+                angT2 = (suma2/suma1)
+                angT3 = Math.atan(angT2) * 180/Math.PI;
+                sumaY5 = angT3.toFixed(2)
+            }
+            document.querySelector('#sumaY5').innerHTML = sumaY5;
+        });
+
+        document.querySelector('#sumatoriaX6').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const inx4= parseFloat(document.querySelector('#inx4').value);
+            const inx5= parseFloat(document.querySelector('#inx5').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+            const iny4= parseFloat(document.querySelector('#iny4').value);
+            const iny5= parseFloat(document.querySelector('#iny5').value);
+
+            let sumaX6;
+            if(op == 'Mᵗ'){
+                suma1 = inx1+inx2+inx3+inx4+inx5;
+                suma2 = iny1+iny2+iny3+iny4+iny5;
+                magT1 = Math.sqrt(Math.pow(suma1,2) + Math.pow(suma2,2))
+                sumaX6 = magT1.toFixed(2)
+            }
+            document.querySelector('#sumaX6').innerHTML = sumaX6;
+        });
+
+
+        document.querySelector('#sumatoriaY6').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const inx4= parseFloat(document.querySelector('#inx4').value);
+            const inx5= parseFloat(document.querySelector('#inx5').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+            const iny4= parseFloat(document.querySelector('#iny4').value);
+            const iny5= parseFloat(document.querySelector('#iny5').value);
+    
+            let sumaY6;
+            if(op == 'θ'){
+                suma1 = inx1+inx2+inx3+inx4+inx5;
+                suma2 = iny1+iny2+iny3+iny4+iny5;
+                angT2 = (suma2/suma1)
+                angT3 = Math.atan(angT2) * 180/Math.PI;
+                sumaY6 = angT3.toFixed(2)
+            }
+            document.querySelector('#sumaY6').innerHTML = sumaY6;
+        });
+
+        document.querySelector('#magniT').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const inx4= parseFloat(document.querySelector('#inx4').value);
+            const inx5= parseFloat(document.querySelector('#inx5').value);
+            const inx6= parseFloat(document.querySelector('#inx6').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+            const iny4= parseFloat(document.querySelector('#iny4').value);
+            const iny5= parseFloat(document.querySelector('#iny5').value);
+            const iny6= parseFloat(document.querySelector('#iny6').value);
+
+            let magT
+            if(op == 'MAGNITUD TOTAL (N)'){
+                suma1 = inx1+inx2+inx3+inx4+inx5+inx6;
+                suma2 = iny1+iny2+iny3+iny4+iny5+iny6;
+                magT1 = Math.sqrt(Math.pow(suma1,2) + Math.pow(suma2,2))
+                magT = magT1.toFixed(2)
+            }
+            document.querySelector('#magT').innerHTML = magT;
+        });
+
+        document.querySelector('#anguT').addEventListener('click', () =>{
+            const inx1= parseFloat(document.querySelector('#inx1').value);
+            const inx2= parseFloat(document.querySelector('#inx2').value);
+            const inx3= parseFloat(document.querySelector('#inx3').value);
+            const inx4= parseFloat(document.querySelector('#inx4').value);
+            const inx5= parseFloat(document.querySelector('#inx5').value);
+            const inx6= parseFloat(document.querySelector('#inx6').value);
+            const iny1= parseFloat(document.querySelector('#iny1').value);
+            const iny2= parseFloat(document.querySelector('#iny2').value);
+            const iny3= parseFloat(document.querySelector('#iny3').value);
+            const iny4= parseFloat(document.querySelector('#iny4').value);
+            const iny5= parseFloat(document.querySelector('#iny5').value);
+            const iny6= parseFloat(document.querySelector('#iny6').value);
+
+            let angT
+            if(op == 'ÁNGULO TOTAL (θ)'){
+                suma1 = inx1+inx2+inx3+inx4+inx5+inx6;
+                suma2 = iny1+iny2+iny3+iny4+iny5+iny6;
+                angT2 = (suma2/suma1)
+                angT3 = Math.atan(angT2) * 180/Math.PI;
+                angT = angT3.toFixed(2)
+            }
+            document.querySelector('#angT').innerHTML = angT;
+        });       
+    </script>
+</body>
+<footer> 
+<center>
+    <div id="LogoN">
+        <img src="./img/ImgNewton.png" alt="LogoN"  width="235px">
+    </div>
+
+    <div id = "titleFooter"> 
+        <h4>Made with ❤ by Mariana</h4> 
+    </div> 
+</footer>
+</center> 
+</html>
